@@ -2,6 +2,8 @@
 import rose3 from '../src/Assets/rose3.jpg';
 import rose2 from '../src/Assets/rose2.jpg';
 import rose1 from '../src/Assets/rose1.jpg';
+import rose4 from '../src/Assets/rose4.jpg';
+
 import sunflower1 from '../src/Assets/sunflower1.jpg';
 import sunflower2 from '../src/Assets/sunflower2.jpg';
 import sunflowerKey from '../src/Assets/sunflowerkey1.jpg';
@@ -40,7 +42,7 @@ export const products = [
     name: "Red Rose",
     price: 1000,
     discount: 200,
-    images: [rose3, rose2, rose1],
+    images: [rose3, rose2, rose1,rose4],
     category: "Flowers",
   },
   {
@@ -149,9 +151,12 @@ export const products = [
   },
 ];
 
-export const ads = [
-  { id: 1, text: "Get 20% off on all flowers this week!", image: rose1 },
-  { id: 2, text: "Buy 2 keychains, get 1 free!", image: sunflowerKey },
-  { id: 3, text: "Hats on sale - 15% off!", image: top },
-  { id: 4, text: "Free shipping on bags over ₹2500!", image: heart },
-];
+
+
+
+// export const ads = [
+//   { id: 1, text: "Get 20% off on all flowers this week!", image: rose1 },
+//   { id: 2, text: "Buy 2 keychains, get 1 free!", image: sunflowerKey },
+//   { id: 3, text: "Hats on sale - 15% off!", image: top },
+//   { id: 4, text: "Free shipping on bags over ₹2500!", image: heart },
+// ];

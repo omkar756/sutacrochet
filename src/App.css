@@ -5,7 +5,22 @@
   padding: 20px;
 }
 
-/* Welcome Haven */
+/* Fixed Header */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #f5f1e9; /* Match the background to blend seamlessly */
+  z-index: 10; /* Ensure it stays above other content */
+  padding: 10px 0; /* Reduce padding for a slimmer header */
+}
+
+/* Adjust content to avoid overlap with fixed header */
+.haven-content {
+  padding-top: 80px; /* Add padding to push content below the fixed header */
+}
+
 /* Welcome Haven */
 .welcome-haven {
   position: fixed;
@@ -13,7 +28,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(245, 241, 233, 0.95); /* Changed to a softer, lighter beige */
+  background: rgba(245, 241, 233, 0.95);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,15 +36,15 @@
 }
 
 .welcome-text {
-  font-size: 4.5rem; /* Slightly larger for impact */
-  color: #8b6b52; /* Changed to a warm brown for better contrast */
-  text-shadow: 2px 2px 8px rgba(139, 107, 82, 0.3); /* Softer shadow */
-  font-weight: 700; /* Bolder text */
-  text-align: center; /* Ensure center alignment */
-  padding: 20px 40px; /* Add some padding */
-  background: rgba(255, 255, 255, 0.7); /* Subtle white backdrop */
-  border-radius: 15px; /* Rounded corners */
-  border: 2px solid #d9b99b; /* Subtle border */
+  font-size: 4.5rem;
+  color: #8b6b52;
+  text-shadow: 2px 2px 8px rgba(139, 107, 82, 0.3);
+  font-weight: 700;
+  text-align: center;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  border: 2px solid #d9b99b;
 }
 
 /* Haven Content */
@@ -37,12 +52,12 @@
   font-size: 3.5rem;
   color: #8b6b52;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 0; /* Remove default margin to fit snugly in fixed header */
 }
 
 .carousel-haven .carousel-image {
   width: 100%;
-  height: 250px; /* Reduce height */
-  width: 100%;
+  height: 250px;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
@@ -83,16 +98,28 @@
   transition: box-shadow 0.3s ease;
 }
 
+.card-text-content {
+  position: relative;
+  padding-top: 10px;
+}
+
 .yarn-edge {
   position: absolute;
-  top: -5px;
-  left: -5px;
-  width: calc(100% + 10px);
-  height: calc(100% + 10px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: 3px solid #d9b99b;
-  border-radius: 14px;
+  border-radius: 8px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M0 10 Q10 5, 20 10' stroke='%23d9b99b' stroke-width='2' fill='none'/%3E%3C/svg%3E") repeat;
   opacity: 0.6;
+  z-index: 0;
+}
+
+.haven-card h5,
+.haven-card p {
+  position: relative;
+  z-index: 1;
 }
 
 .haven-image {
@@ -100,80 +127,6 @@
   height: 220px;
   object-fit: cover;
   border-radius: 8px;
-}
-
-/* Footer Styles */
-.haven-footer {
-  background: #8b6b52;
-  color: #fff;
-  padding: 40px 20px;
-  margin-top: 40px;
-  border-top: 4px solid #d9b99b;
-}
-
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-offers h3,
-.footer-contact h3 {
-  color: #fff;
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.footer-offers .offers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 15px;
-}
-
-.offer-item {
-  text-align: center;
-}
-
-.offer-item img {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 6px;
-  border: 2px solid #d9b99b;
-}
-
-.offer-item p {
-  margin: 5px 0;
-  font-size: 1rem;
-  color: #f5f1e9;
-}
-
-.footer-contact p {
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
-
-.social-links a {
-  color: #f5f1e9;
-  text-decoration: none;
-  margin: 0 12px;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #d9b99b;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  margin-top: 20px;
-  font-size: 1rem;
 }
 
 /* Fabric Modal */
@@ -213,22 +166,22 @@
   font-size: 1.3rem;
   cursor: pointer;
   transition: background 0.3s ease;
-  z-index: 10; /* Added to ensure it stays on top */
+  z-index: 10;
 }
 
 .close-fabric:hover {
   background: #6b4e3d;
 }
 
-/* Ensure the fabric-image doesn't overlap the button */
 .fabric-image {
   width: 100%;
   max-height: 400px;
   object-fit: cover;
   border-radius: 8px;
-  position: relative; /* Ensure it respects z-index stacking */
-  z-index: 1; /* Lower than the close button */
+  position: relative;
+  z-index: 1;
 }
+
 .fabric-details {
   text-align: center;
   margin-top: 20px;
@@ -251,13 +204,9 @@
   .product-haven { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
   .fabric-content { width: 95%; }
   .fabric-image { max-height: 350px; }
-  .footer-content { gap: 25px; }
-  .footer-offers, .footer-contact { text-align: center; }
-  .offers-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-
-/* Add these new classes */
+/* Price Styles */
 .original-price {
   text-decoration: line-through;
   color: #888;
@@ -269,14 +218,4 @@
   color: #8b6b52;
   font-size: 1.5rem;
   font-weight: bold;
-}
-
-/* Existing styles (keep them as is, just showing context) */
-.fabric-details p {
-  color: #333;
-  font-size: 1.5rem;
-}
-
-.haven-card p {
-  margin: 5px 0;
 }

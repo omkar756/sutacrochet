@@ -1,5 +1,3 @@
-
-// App.js
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
@@ -49,27 +47,27 @@ function App() {
   return (
     <div className="natural-haven">
       {showWelcome && (
-  <motion.div
-    className="welcome-haven"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.8 }}
-  >
-    <motion.h1
-      className="welcome-text"
-      initial={{ y: -50, scale: 0.9 }}
-      animate={{ y: 0, scale: 1 }}
-      transition={{ duration: 0.6, type: "spring", stiffness: 120 }}
-    >
-      Welcome to SutaCrochet
-    </motion.h1>
-  </motion.div>
-)}
+        <motion.div
+          className="welcome-haven"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h1
+            className="welcome-text"
+            initial={{ y: -50, scale: 0.9 }}
+            animate={{ y: 0, scale: 1 }}
+            transition={{ duration: 0.6, type: "spring", stiffness: 120 }}
+          >
+            Welcome to SutaCrochet
+          </motion.h1>
+        </motion.div>
+      )}
 
       {!showWelcome && (
         <div className="haven-content">
-          <header className="text-center my-4">
+          <header className="fixed-header text-center my-4">
             <motion.h1
               className="haven-title"
               initial={{ opacity: 0, y: -20 }}
@@ -115,48 +113,6 @@ function App() {
           </section>
 
           <Biography />
-{/* 
-          <footer className="haven-footer">
-            <div className="footer-content">
-              <motion.div
-                className="footer-offers"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-              >
-                <h3>Special Offers</h3>
-                <div className="offers-grid">
-                  {ads.map((offer) => (
-                    <div key={offer.id} className="offer-item">
-                      <img src={offer.image} alt={offer.text} />
-                      <p>{offer.text}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="footer-contact"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                <h3>Connect With Us</h3>
-                <p>Email: hello@sutacrochet.com</p>
-                <p>Phone: (555) 123-4567</p>
-                <div className="social-links">
-                  <a href="#instagram">Instagram</a>
-                  <a href="#facebook">Facebook</a>
-                  <a href="#pinterest">Pinterest</a>
-                </div>
-              </motion.div>
-            </div>
-            <div className="footer-bottom">
-              <p>© 2025 SutaCrochet. Handcrafted with Love.</p>
-            </div>
-          </footer> */}
 
           {showModal && selectedProduct && (
             <motion.div
@@ -232,15 +188,17 @@ const ProductCard = ({ product, onClick }) => (
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
   >
-    <div className="yarn-edge" />
     <img src={product.images[0]} alt={product.name} className="haven-image" />
-    <h5>{product.name}</h5>
-    <p>
-      <span className="original-price">₹{product.price}</span>{" "}
-      <span className="discounted-price">
-        ₹{product.price - product.discount}
-      </span>
-    </p>
+    <div className="card-text-content">
+      <div className="yarn-edge" />
+      <h5>{product.name}</h5>
+      <p>
+        <span className="original-price">₹{product.price}</span>{" "}
+        <span className="discounted-price">
+          ₹{product.price - product.discount}
+        </span>
+      </p>
+    </div>
   </motion.div>
 );
 

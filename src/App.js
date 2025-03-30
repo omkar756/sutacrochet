@@ -49,23 +49,23 @@ function App() {
   return (
     <div className="natural-haven">
       {showWelcome && (
-        <motion.div
-          className="welcome-haven"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.h1
-            className="welcome-text"
-            initial={{ y: -50 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.6, type: "spring", stiffness: 120 }}
-          >
-            Welcome to SutaCrochet
-          </motion.h1>
-        </motion.div>
-      )}
+  <motion.div
+    className="welcome-haven"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.8 }}
+  >
+    <motion.h1
+      className="welcome-text"
+      initial={{ y: -50, scale: 0.9 }}
+      animate={{ y: 0, scale: 1 }}
+      transition={{ duration: 0.6, type: "spring", stiffness: 120 }}
+    >
+      Welcome to SutaCrochet
+    </motion.h1>
+  </motion.div>
+)}
 
       {!showWelcome && (
         <div className="haven-content">

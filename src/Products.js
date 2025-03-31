@@ -15,7 +15,12 @@ import mickeykeychain from '../src/Assets/mickeykeychain.jpg';
 import flowerkeychain from '../src/Assets/flowerkeychain.jpg';
 import heart from '../src/Assets/heart.jpg';
 import heart2 from '../src/Assets/heart2.jpg';
+import heart3 from '../src/Assets/redheart2.jpg';
+
 import lipstick from '../src/Assets/lipstick.jpg';
+import lipstick2 from '../src/Assets/liptick2.jpg';
+import lipstick3 from '../src/Assets/lipstic3.jpg';
+
 import threeredRose from '../src/Assets/threerose.jpg';
 import threeyellowRose from '../src/Assets/threeyellowbucket.jpg';
 import threeyellowRose2 from '../src/Assets/threeyellowbucket2.jpg';
@@ -30,6 +35,15 @@ import doll3 from '../src/Assets/doll3.jpg';
 import whale from '../src/Assets/whale1.jpg';
 import whale2 from '../src/Assets/whale2.jpg';
 import whale3 from '../src/Assets/whale3.jpg';
+
+import eyekey from '../src/Assets/eyekey.jpg';
+import eyekey2 from '../src/Assets/eyekey2.jpg';
+import heartnote from '../src/Assets/heartnote.jpg';
+
+import pinkHeart from '../src/Assets/pinkheart.jpg';
+
+import teddy from '../src/Assets/tedy.jpg';
+
 
 // Carousel with 5 mixed images from different products
 export const carouselImages = [
@@ -78,7 +92,7 @@ export const products = [
     name: "Read Heart",
     price: 500,
     discount: 100,
-    images: [heart, heart2],
+    images: [heart, heart2,heart3],
     category: "Bags",
   },
   {
@@ -118,7 +132,7 @@ export const products = [
     name: "Lipbalm Holder",
     price: 200,
     discount: 50,
-    images: [lipstick],
+    images: [lipstick,lipstick2,lipstick3],
     category: "Keychains",
   },
   {
@@ -157,8 +171,40 @@ export const products = [
     id: 15,
     name: "Muffler",
     price: 800,
-    discount: 400,
+    discount: 200,
     images: [whale, whale2,whale3],
+    category: "Keychains",
+  },
+  {
+    id: 15,
+    name: "Devil Eye",
+    price: 300,
+    discount: 200,
+    images: [eyekey, eyekey2],
+    category: "Keychains",
+  },
+  {
+    id: 15,
+    name: "HeartNote",
+    price: 200,
+    discount: 100,
+    images: [heartnote],
+    category: "Keychains",
+  },
+  {
+    id: 15,
+    name: "Teddy",
+    price: 200,
+    discount: 100,
+    images: [teddy],
+    category: "Keychains",
+  },
+  {
+    id: 15,
+    name: "Pink Heart",
+    price: 500,
+    discount: 300,
+    images: [pinkHeart],
     category: "Keychains",
   },
 ];

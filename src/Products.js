@@ -27,6 +27,10 @@ import handbag from '../src/Assets/handbag.jpg';
 import doll from '../src/Assets/doll.jpg';
 import doll3 from '../src/Assets/doll3.jpg';
 
+import whale from '../src/Assets/whale1.jpg';
+import whale2 from '../src/Assets/whale2.jpg';
+import whale3 from '../src/Assets/whale3.jpg';
+
 // Carousel with 5 mixed images from different products
 export const carouselImages = [
   { id: 1, image: rose3, caption: "Beautiful Red Roses" },
@@ -147,6 +151,14 @@ export const products = [
     price: 800,
     discount: 300,
     images: [doll, doll3],
+    category: "Keychains",
+  },
+  {
+    id: 15,
+    name: "Muffler",
+    price: 800,
+    discount: 400,
+    images: [whale, whale2,whale3],
     category: "Keychains",
   },
 ];

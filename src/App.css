@@ -1,5 +1,6 @@
 .natural-haven {
-  font-family: "Caveat", cursive;
+  /* font-family: "Caveat", cursive; */
+  color: #6b4e3d;
   background: #fdffdc url(https://www.transparenttextures.com/patterns/natural-paper.png) repeat;
   min-height: 100vh;
   padding: 20px;
@@ -92,7 +93,7 @@
 .haven-card {
   position: relative;
   padding: 20px;
-  background: #fff;
+  background: #ececec;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
